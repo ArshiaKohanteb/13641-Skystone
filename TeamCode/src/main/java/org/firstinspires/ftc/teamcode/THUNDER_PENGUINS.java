@@ -13,11 +13,26 @@ import org.firstinspires.ftc.robotcore.external.navigation.AxesOrder;
 import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
 import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
 
-@Autonomous(name="ThunderPenguin", group="")
+@Autonomous(name="Auto (FR V1)", group="")
 public class THUNDER_PENGUINS extends LinearOpMode {
-    //
-
-
+    /*
+    +------------------+------------------+
+    | /                |                \ |
+    |/                 |                 \|
+    |       POS 2      |       POS 1      |
+    |    Blue Build    |     Red Build    |
+    |       Zone       |       Zone       |
+    |                  |                  |
+    +------------------+------------------+
+    |                  |                  |
+    |       Pos 3      |      Pos 4       |
+    |     Blue Load    |     Red Load     |
+    |       Zone       |       Zone       |
+    |-----             |             -----|
+    |     |            |            |     |
+    |     |            |            |     |
+    +------------------+------------------+
+    */
     @Override
     public void internalPostLoop() {
         super.internalPostLoop();
