@@ -33,10 +33,19 @@ public class THUNDER_PENGUINS extends LinearOpMode {
     |     |            |            |     |
     +------------------+------------------+
     */
+
+    int pos = 1;
+
     @Override
     public void internalPostLoop() {
         super.internalPostLoop();
     }
+
+    /*
+    ============================================================================================================================================================
+                                                                                VARIABLES
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------
+    */
 
     DcMotor frontleft;
     DcMotor frontright;
@@ -51,14 +60,19 @@ public class THUNDER_PENGUINS extends LinearOpMode {
     Double cpi = (cpr * gearratio)/(Math.PI * diameter); //counts per inch, 28cpr * gear ratio / (2 * pi * diameter (in inches, in the center))
     Double bias = 0.8;//default 0.8
     Double meccyBias = 0.9;//change to adjust only strafing movement
-    //
+
     Double conversion = cpi * bias;
     Boolean exit = false;
-    //
+
     BNO055IMU imu;
     Orientation angles;
     Acceleration gravity;
-    //
+
+    /*
+    ============================================================================================================================================================
+                                                                           RUN OP MODE
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------
+    */
     public void runOpMode(){
         //
         initGyro();
@@ -73,48 +87,23 @@ public class THUNDER_PENGUINS extends LinearOpMode {
         //
         waity();
         //
-        strafeToPosition(-10.6, 0.7);
-        //
-        moveToPosition(27.2, 0.7);
-        //
-        moveToPosition(-27, 0.7);
-        //
-        strafeToPosition(25.2, 0.7);
-        //
-        moveToPosition(46.4, 0.7);
-        //
-        strafeToPosition(-24.6, 0.7);
-        //
-        moveToPosition(-17.6, 0.7);
-        //
-        strafeToPosition(28.4, 0.7);
-        //
-        moveToPosition(-25.8, 0.7);
-        //
-        strafeToPosition(52.2, 0.7);
-        //
-        moveToPosition(22.8, 0.7);
-        //
-        moveToPosition(29.2, 0.7);
-        //
-        turnWithGyro(90, -0.7);
-        //
-        moveToPosition(48.2, 0.7);
-        //
-        turnWithGyro(65, -0.7);
-        //
-        moveToPosition(21, 0.7);
-        //
-        turnWithGyro(35, -0.7);
-        //
-        moveToPosition(20.8, 0.7);
-        //
-        turnWithGyro(80, -0.7);
-        //
-        moveToPosition(20.6, 0.7);
-        //
+
+        /*
+    ============================================================================================================================================================
+                                                                          MOVES
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------
+        */
+
+
+        strafeToPosition(5, 0.7);
+        turnWithGyro(80, 0.7);
+        moveToPosition(10, 0.7);
+
     }
-    //
+
+
+
+
     /*
     This function's purpose is simply to drive forward or backward.
     To drive backward, simply make the inches input negative.
