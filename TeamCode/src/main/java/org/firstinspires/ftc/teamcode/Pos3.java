@@ -14,7 +14,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
 import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
 
 @Autonomous(name="Auto (FR V1)", group="")
-public class THUNDER_PENGUINS extends LinearOpMode {
+public class Pos3 extends LinearOpMode {
     /*
     +------------------+------------------+
     | /                |                \ |
@@ -34,7 +34,6 @@ public class THUNDER_PENGUINS extends LinearOpMode {
     +------------------+------------------+
     */
 
-    int pos = 1;
 
     @Override
     public void internalPostLoop() {
